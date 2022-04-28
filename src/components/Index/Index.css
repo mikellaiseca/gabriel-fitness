@@ -1,0 +1,147 @@
+.hero {
+    height: 500px;
+}
+
+.about.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.btn-about {
+    width: 30%;
+    margin-left: 40%;
+}
+
+.btn-about:link,
+.btn-about:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+    padding: 10px 30px;
+    border: 1px solid;
+    border-radius: 1000px;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn-about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+}
+
+.btn-about:active {
+    transform: translateY(-3px);
+}
+
+.btn-about::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn-about:hover::after {
+    background-color: rgb(0, 238, 255);
+    transform: scaleX(1.4) scaleY(1.5);
+    opacity: 0;
+}
+
+.hero-2 {
+    height: fit-content;
+    background-color: greenyellow;
+    padding: 20px 0;
+}
+
+.free-download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 25%;
+}
+
+.free-download-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.free-download-pic {
+    width: 25%;
+    box-shadow: 10px 5px 5px rgb(67, 67, 67);
+}
+
+.btn-dwnld {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: none;
+}
+
+.btn-dwnld:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #FFD401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.btn-dwnld:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.btn-dwnld span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-dwnld:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
